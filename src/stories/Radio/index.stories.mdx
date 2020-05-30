@@ -1,0 +1,39 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {Radio} from '../../components';
+import {RadioEx} from './example';
+
+<Meta title='Components|Radio'/>
+
+# Radio
+<Preview>
+  <Story name="Radio">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <RadioEx styled="margin-right: 20px;" name="radio">Primary</RadioEx>
+      <RadioEx styled="margin-right: 20px;" name="radio" color="secondary">Secondary</RadioEx>
+      <RadioEx styled="margin-right: 20px;" name="radio" color="#BEBB1A">Custom color</RadioEx>
+      <RadioEx styled="margin-right: 20px;" name="radio" color="#F68E55" error>Error</RadioEx>
+      <Radio styled="margin-right: 20px;" name="radio1" color="#F68E55" checked disabled>Disabled</Radio>
+      <Radio styled="margin-right: 20px;" name="radio1" color="#199458" disabled>Disabled</Radio>
+    </div>
+  </Story>
+</Preview>
+
+### Without label
+<Preview>
+  <Story name="Radio without label">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <RadioEx styled="margin-right: 20px;" name="radio2" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="secondary" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#BEBB1A" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#48472E" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#6131C6" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#6D63A4" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#37E21C" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#63E8F8" />
+      <RadioEx styled="margin-right: 20px;" name="radio2" color="#3B275E" />
+    </div>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Radio} />

@@ -1,0 +1,150 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {Grid, Container} from '../../components';
+import {Box} from '../../helpers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+<Meta title='Components|Grid'/>
+
+# Grid
+<Preview>
+  <Story name="Grid">
+    <Grid container>
+      <Grid item sm={6} md={4} lg={3}>
+        <Container p="10px">
+          <Box>sm=6 md=4 lg=3</Box>
+        </Container>
+      </Grid>
+      <Grid item sm={6} md={4} lg={3}>
+        <Container p="10px">
+          <Box>sm=6 md=4 lg=3</Box>
+        </Container>
+      </Grid>
+      <Grid item sm={6} md={4} lg={3}>
+        <Container p="10px">
+          <Box>sm=6 md=4 lg=3</Box>
+        </Container>
+      </Grid>
+      <Grid item sm={6} md={4} lg={3}>
+        <Container p="10px">
+          <Box>sm=6 md=4 lg=3</Box>
+        </Container>
+      </Grid>
+    </Grid>
+  </Story>
+</Preview>
+
+# Nested Grid
+<Preview>
+  <Story name="Nested Grid">
+    <Grid container>
+      <Grid container item sm={4} direction="column">
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+      </Grid>
+      <Grid container item sm={4} direction="column">
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+      </Grid>
+      <Grid container item sm={4} direction="column">
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container p="10px">
+            <Box>xs=12</Box>
+          </Container>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Story>
+</Preview>
+
+# Grid auto
+<Preview>
+  <Story name="Grid Auto">
+    <Grid container>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box style={{width: "500px"}}>500px width</Box>
+        </Container>
+      </Grid>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box>100% width</Box>
+        </Container>
+      </Grid>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box>100% width</Box>
+        </Container>
+      </Grid>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box style={{width: "350px"}}>350px width</Box>
+        </Container>
+      </Grid>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box>100% width</Box>
+        </Container>
+      </Grid>
+      <Grid item autoWidth={true}>
+        <Container p="10px">
+          <Box>100% width</Box>
+        </Container>
+      </Grid>
+    </Grid>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Grid} />

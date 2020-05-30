@@ -1,0 +1,54 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {Loading, Container} from '../../components';
+import {Preview, GlobalStyle} from '../helper';
+
+<Meta title='Components|Loading'/>
+
+# Loading
+<Preview>
+  <Story name="Loading">
+    <>
+      <GlobalStyle/>
+      <div style={{display: "flex", "alignItems": "flex-end"}}>
+        <Loading size="sm" styled="margin-right: 20px" />
+        <Loading size="md" styled="margin-right: 20px" color="secondary" />
+        <Loading size="lg" styled="margin-right: 20px" color="default" />
+        <Loading size="45px" styled="margin-right: 20px" color="#22F558" />
+      </div>
+    </>
+  </Story>
+</Preview>
+
+## Props Loading Spinner
+<Props of={Loading.Spinner} />
+
+### Loading Dots
+<Preview>
+  <Story name="Loading Dots">
+    <>
+      <GlobalStyle/>
+      <div style={{display: "flex", "alignItems": "flex-end"}}>
+        <Loading.Dots size={4} styled="margin-right: 20px" />
+        <Loading.Dots styled="margin-right: 20px" color="secondary" />
+        <Loading.Dots size={10} styled="margin-right: 20px" color="default" />
+        <Loading.Dots size={14} styled="margin-right: 20px" color="#22F558" />
+        <Loading.Dots
+          size={14}
+          styled="margin-right: 20px"
+          firstDotProps={{styled: "background-color: red"}}
+          secondDotProps={{styled: "background-color: blue"}}
+          thirdDotProps={{styled: "background-color: yellow"}}
+        />
+        <Loading.Dots
+          size={14}
+          styled="margin-right: 20px"
+          firstDotProps={{mr: "10px"}}
+          secondDotProps={{mr: "10px"}}
+        />
+      </div>
+    </>
+  </Story>
+</Preview>
+
+## Props Loading Dots
+<Props of={Loading.Dots} />

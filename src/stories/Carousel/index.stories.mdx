@@ -1,0 +1,209 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {GlobalStyle} from '../helper';
+import {Grid, Button, Card, Carousel, ImageScale, Container} from '../../components';
+import CarouselEx from './example';
+
+<Meta title='Components|Carousel'/>
+
+# Carousel
+<Preview>
+  <Story name="Carousel">
+    <>
+      <GlobalStyle/>
+      <Carousel infinite={true} debug={true}>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+      </Carousel>
+    </>
+  </Story>
+</Preview>
+
+### With custom button
+<Preview>
+  <Story name="Carousel with custom button">
+    <>
+      <GlobalStyle/>
+      <CarouselEx showArrow={true} showDots={true} stopOnHover={false} autoPlaySpeed={1000} infinite={true}>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <img src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+      </CarouselEx>
+    </>
+  </Story>
+</Preview>
+
+### With card
+<Preview>
+  <Story name="Carousel with card">
+    <>
+      <GlobalStyle/>
+      <Grid container alignItems="flex-start">
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false}>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false} name="debug">
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false}>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false}>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false}>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={4} pr="10px">
+          <Card>
+            <Card.Body p="10px">
+              <Carousel stopOnHover={false}>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <img src="https://picsum.photos/600/400" />
+                </Carousel.Slide>
+              </Carousel>
+            </Card.Body>
+          </Card>
+        </Grid>
+      </Grid>
+    </>
+  </Story>
+</Preview>
+
+### With custom image
+<Preview>
+  <Story name="Carousel with custom image">
+    <>
+      <GlobalStyle/>
+      <Carousel autoPlaySpeed={null}>
+        <Carousel.Slide>
+          <ImageScale src="https://picsum.photos/600/400"><Button>Clickable button</Button></ImageScale>
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <ImageScale src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <ImageScale src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <ImageScale src="https://picsum.photos/600/400" />
+        </Carousel.Slide>
+      </Carousel>
+    </>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Carousel} />

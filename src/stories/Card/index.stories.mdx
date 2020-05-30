@@ -1,0 +1,49 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {GlobalStyle} from '../helper';
+import {Card, Grid, Text} from '../../components';
+
+<Meta title='Components|Card'/>
+
+# Card
+<Preview>
+  <Story name="Card">
+  <>
+    <GlobalStyle/>
+    <Grid container alignItems="flex-start">
+      <Grid item xs={4} pr="10px">
+        <Card>
+          <Card.Header p="10px">
+            <Text h1>Profile</Text>
+          </Card.Header>
+          <Card.Body p="10px">
+            <Text>This is body</Text>
+          </Card.Body>
+        </Card>
+      </Grid>
+      <Grid item xs={4} pr="10px">
+        <Card>
+          <Card.Header p="10px">
+            <Text h2>Profile</Text>
+          </Card.Header>
+          <Card.Body p="10px">
+            <Text>This is body</Text>
+          </Card.Body>
+        </Card>
+      </Grid>
+      <Grid item xs={4}>
+        <Card>
+          <Card.Header p="10px">
+            <Text h3>Profile</Text>
+          </Card.Header>
+          <Card.Body p="10px">
+            <Text>This is body</Text>
+          </Card.Body>
+        </Card>
+      </Grid>
+    </Grid>
+  </>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Card} />

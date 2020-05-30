@@ -1,0 +1,33 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {GlobalStyle} from '../helper';
+import {Card, Button, Grid, Text, Scrollable, ImageScale, Container} from '../../components';
+
+<Meta title='Components|Image'/>
+
+# Image Scale
+<Preview>
+  <Story name="Image Scale">
+    <>
+      <GlobalStyle/>
+      <Container display="flex">
+        <Container mr="10px">
+          <Text h3 textAlign="center" mb="10px">Default</Text>
+          <ImageScale src="https://source.unsplash.com/random/600x400" w="250px" />
+        </Container>
+        <Container mr="10px">
+          <Text h3 textAlign="center" mb="10px">Overlay Transparent</Text>
+          <ImageScale src="https://source.unsplash.com/random/600x400" w="250px" overlayProps={{styled:"background-color: transparent;"}} />
+        </Container>
+        <Container mr="10px">
+          <Text h3 textAlign="center" mb="10px">With Button</Text>
+          <ImageScale src="https://source.unsplash.com/random/600x400" w="250px">
+            <Button color="plain">Go to somewhere</Button>
+          </ImageScale>
+        </Container>
+      </Container>
+    </>
+  </Story>
+</Preview>
+
+## Props
+<Props of={ImageScale} />

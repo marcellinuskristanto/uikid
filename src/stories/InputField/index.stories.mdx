@@ -1,0 +1,54 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {InputField} from '../../components';
+import {NumberField, InputFieldMaskEx} from './example';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+<Meta title='Components|InputField'/>
+
+# InputField
+<Preview>
+  <Story name="InputField">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <InputField size="sm" styled="margin-right: 20px;" placeholder="Small" />
+      <InputField size="md" color="secondary" styled="margin-right: 20px" placeholder="Medium"/>
+      <InputField size="lg" color="default" placeholder="Large"/>
+    </div>
+  </Story>
+</Preview>
+
+### Outlined
+<Preview>
+  <Story name="InputField Outlined">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <InputField size="sm" variant="outlined" styled="margin-right: 20px" placeholder="Small" rightIcon={<FontAwesomeIcon icon={faCoffee} />} />
+      <InputField size="md" variant="outlined" color="secondary" styled="margin-right: 20px" placeholder="Medium" leftIcon={<FontAwesomeIcon icon={faCoffee} />} />
+      <InputField size="lg" variant="outlined" color="default" placeholder="Small" rightIcon={<FontAwesomeIcon icon={faPaperPlane} />} />
+    </div>
+  </Story>
+</Preview>
+
+### Number
+<Preview>
+  <Story name="InputField Number">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <InputField size="sm" type="number" variant="outlined" styled="margin-right: 20px" placeholder="Small" />
+      <InputField size="md" type="number" variant="outlined" color="secondary" styled="margin-right: 20px" placeholder="Medium" />
+      <InputField size="lg" type="number" variant="outlined" color="default" placeholder="Small" />
+    </div>
+  </Story>
+</Preview>
+
+### Error
+<Preview>
+  <Story name="InputField Error">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <InputField size="sm" variant="outlined" styled="margin-right: 20px" placeholder="Small" error />
+      <InputField size="md" color="secondary" styled="margin-right: 20px" placeholder="Medium" error />
+      <InputField size="lg" variant="outlined" color="default" placeholder="Large" error />
+    </div>
+  </Story>
+</Preview>
+
+## Props
+<Props of={InputField} />

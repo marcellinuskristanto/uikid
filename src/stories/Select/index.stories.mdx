@@ -1,0 +1,222 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {Select, Grid, Container, InputField} from '../../components';
+import {Preview, GlobalStyle} from '../helper';
+import {data} from './example';
+
+<Meta title='Components|Select'/>
+
+# Select
+[react-select](https://github.com/JedWatson/react-select) component
+<Preview style={{zIndex: 3}}>
+  <Story name="Select">
+    <>
+      <GlobalStyle/>
+      <Grid container styled="align-items: flex-end">
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Secondary" color="secondary"
+              options={data} variant="outlined"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Primary"
+              options={data}
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Default"
+              options={data} variant="outlined" color="default"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Custom"
+              options={data} color="#22F558" textColor="black"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Disabled" color="secondary"
+              options={data} variant="outlined" isDisabled
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Disabled"
+              options={data} isDisabled
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Error" color="secondary"
+              options={data} variant="outlined" error
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Error"
+              options={data} error
+            />
+          </Container>
+        </Grid>
+      </Grid>
+    </>
+  </Story>
+</Preview>
+
+### Multi select
+<Preview>
+  <Story name="Multi Select">
+    <>
+      <GlobalStyle/>
+      <Grid container styled="align-items: flex-end">
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Secondary" color="secondary"
+              options={data} isMulti variant="outlined"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Primary"
+              options={data} isMulti
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Default"
+              options={data} variant="outlined" isMulti color="default"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Custom"
+              options={data} isMulti color="#22F558" textColor="black"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Disabled" color="secondary"
+              options={data} isMulti variant="outlined" isDisabled
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Disabled"
+              options={data} isMulti isDisabled
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Error" color="secondary"
+              options={data} isMulti variant="outlined" error
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={3}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Error"
+              options={data} isMulti error
+            />
+          </Container>
+        </Grid>
+      </Grid>
+    </>
+  </Story>
+</Preview>
+
+### Size
+<Preview style={{zIndex: 1}}>
+  <Story name="Select size">
+    <>
+      <GlobalStyle/>
+      <Grid container styled="align-items: flex-end">
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="sm" styled="margin-right: 20px;" placeholder="Secondary" color="secondary"
+              options={data} variant="outlined"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Primary"
+              options={data}
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="lg" styled="margin-right: 20px;" placeholder="Default"
+              options={data} variant="outlined" color="default"
+            />
+          </Container>
+        </Grid>
+      </Grid>
+      <Grid container styled="align-items: flex-end">
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="sm" styled="margin-right: 20px;" placeholder="Secondary" color="secondary"
+              options={data} isMulti variant="outlined"
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="md" styled="margin-right: 20px;" placeholder="Primary"
+              options={data} isMulti
+            />
+          </Container>
+        </Grid>
+        <Grid item xs={4}>
+          <Container p="10px">
+            <Select
+              size="lg" styled="margin-right: 20px;" placeholder="Default"
+              options={data} variant="outlined" isMulti color="default"
+            />
+          </Container>
+        </Grid>
+      </Grid>
+    </>
+  </Story>
+</Preview>
+
+## Props Select
+[react-select props](https://react-select.com/props)
+<Props of={Select} />

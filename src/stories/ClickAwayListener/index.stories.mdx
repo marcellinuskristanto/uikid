@@ -1,0 +1,20 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {ClickAwayListener} from '../../components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+<Meta title='Components|ClickAwayListener'/>
+
+# ClickAwayListener
+<Preview>
+  <Story name="ClickAwayListener">
+    <ClickAwayListener onClickAway={(e) => alert("lalala")}>
+      <div style={{display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100px", background: "lightblue"}}>
+        <span style={{textAlign: "center"}}>Click outside me</span>
+      </div>
+    </ClickAwayListener>
+  </Story>
+</Preview>
+
+## Props
+<Props of={ClickAwayListener} />

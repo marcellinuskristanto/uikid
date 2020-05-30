@@ -1,0 +1,39 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {Checkbox} from '../../components';
+import {CheckboxEx} from './example';
+
+<Meta title='Components|Checkbox'/>
+
+# Checkbox
+<Preview>
+  <Story name="Checkbox">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <CheckboxEx styled="margin-right: 20px;">Primary</CheckboxEx>
+      <CheckboxEx styled="margin-right: 20px;" color="secondary">Secondary</CheckboxEx>
+      <CheckboxEx styled="margin-right: 20px;" color="#BEBB1A">Custom color</CheckboxEx>
+      <CheckboxEx styled="margin-right: 20px;" color="#F68E55" error>Error</CheckboxEx>
+      <Checkbox styled="margin-right: 20px;" color="#F68E55" checked disabled>Disabled</Checkbox>
+      <Checkbox styled="margin-right: 20px;" color="#199458" disabled>Disabled</Checkbox>
+    </div>
+  </Story>
+</Preview>
+
+### Without label
+<Preview>
+  <Story name="Checkbox without label">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <CheckboxEx styled="margin-right: 20px;" />
+      <CheckboxEx styled="margin-right: 20px;" color="secondary" />
+      <CheckboxEx styled="margin-right: 20px;" color="#BEBB1A" />
+      <CheckboxEx styled="margin-right: 20px;" color="#48472E" />
+      <CheckboxEx styled="margin-right: 20px;" color="#6131C6" />
+      <CheckboxEx styled="margin-right: 20px;" color="#6D63A4" />
+      <CheckboxEx styled="margin-right: 20px;" color="#37E21C" />
+      <CheckboxEx styled="margin-right: 20px;" color="#63E8F8" />
+      <CheckboxEx styled="margin-right: 20px;" color="#3B275E" />
+    </div>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Checkbox} />

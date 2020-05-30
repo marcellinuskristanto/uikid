@@ -1,0 +1,20 @@
+export const data = [
+  {value: 1, label: "Orange"},
+  {value: 2, label: "Apple"},
+  {value: 3, label: "Grape"},
+  {value: 4, label: "Banana"},
+  {value: 5, label: "Avocado"},
+  {value: 6, label: "Blueberry"},
+  {value: 7, label: "Cherry"},
+  {value: 8, label: "Lychee"},
+  {value: 9, label: "Mango"},
+  {value: 10, label: "Melon"},
+  {value: 11, label: "Lemon"},
+  {value: 12, label: "Papaya"},
+  {value: 13, label: "Pear"},
+  {value: 14, label: "Pineapple"},
+  {value: 15, label: "Salak"},
+  {value: 16, label: "Rambutan"},
+  {value: 17, label: "Coconut"},
+  {value: 18, label: "Strawberry"}
+]

@@ -1,0 +1,35 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {GlobalStyle} from '../helper';
+import {Card, Grid, Text} from '../../components';
+
+<Meta title='Components|Text'/>
+
+# Text
+<Preview>
+  <Story name="Text">
+  <>
+    <GlobalStyle/>
+    <Text h1>Heading 1</Text>
+    <Text h2>Heading 2</Text>
+    <Text h3>Heading 3</Text>
+    <Text h4>Heading 4</Text>
+    <Text h5>Heading 5</Text>
+    <Text h6>Heading 6</Text>
+    <Text paragraph>Paragraph</Text>
+  </>
+  </Story>
+</Preview>
+
+### Max line overflow
+May not work in some browsers
+<Preview>
+  <Story name="Text max line">
+  <>
+    <GlobalStyle/>
+    <Text maxLine={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet neque enim, non vulputate orci porttitor sit amet. In dui enim, interdum eu felis nec, sodales gravida ex. Sed a tristique ipsum. Sed condimentum urna tellus, eleifend venenatis sapien volutpat eu. Suspendisse lacinia rutrum ipsum, quis varius lorem fringilla ut. Nullam quam diam, commodo non mauris at, egestas condimentum est. Morbi nec eros nec neque gravida cursus at nec tellus. Ut eleifend nisi sit amet nulla consequat sollicitudin. In fermentum scelerisque sem, non posuere magna. Integer ultricies elementum leo porttitor porttitor. In ut facilisis dolor. Aliquam gravida cursus dignissim. In suscipit arcu nulla, non lobortis neque consequat a.</Text>
+  </>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Text} />

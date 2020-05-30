@@ -1,0 +1,48 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import ButtonEx from './example';
+import Button from '../../components/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+<Meta title='Components|Button'/>
+
+# Button
+**Basic**
+<Preview>
+  <Story name="Button">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <Button size="sm" styled="margin-right: 20px">Primary</Button>
+      <Button size="md" color="secondary" styled="margin-right: 20px">Secondary</Button>
+      <Button size="lg" color="plain">Plain</Button>
+    </div>
+  </Story>
+</Preview>
+
+### With icon
+<Preview>
+  <Story name="Button with Icon">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <Button size="sm" styled="margin-right: 20px" rightIcon={<FontAwesomeIcon icon={faCoffee} />}>Primary</Button>
+      <Button size="md" color="secondary" styled="margin-right: 20px" leftIcon={<FontAwesomeIcon icon={faCoffee} />}>Secondary</Button>
+      <Button size="lg" color="plain" rightIcon={<FontAwesomeIcon icon={faPaperPlane} />}>Plain</Button>
+    </div>
+  </Story>
+</Preview>
+
+### With loading
+<Preview>
+  <Story name="Button with Loading">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <ButtonEx size="sm" w="65.33px" h="22px" styled="margin-right: 20px">Primary</ButtonEx>
+      <ButtonEx size="md" w="100.5px" h="34.67px" color="secondary" styled="margin-right: 20px" loadingDelay={150}>Secondary</ButtonEx>
+      <ButtonEx size="lg" w="85.38px" h="44px" color="plain">Plain</ButtonEx>
+    </div>
+  </Story>
+</Preview>
+
+```js
+<Button title="Text content" />
+```
+
+## Props
+<Props of={Button} />

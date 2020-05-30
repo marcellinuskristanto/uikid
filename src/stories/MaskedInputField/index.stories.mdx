@@ -1,0 +1,92 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {MaskedInputField} from '../../components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+<Meta title='Components|MaskedInputField'/>
+
+# MaskedInputField
+MaskedInputField uses InputField internally
+<Preview>
+  <Story name="MaskedInputField">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <MaskedInputField
+        mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+        size="md" styled="margin-right: 20px;" placeholder="Default" type="text"
+      />
+      <MaskedInputField
+        mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+        size="md" styled="margin-right: 20px;" placeholder="Default" type="text" variant="outlined"
+      />
+    </div>
+  </Story>
+</Preview>
+
+## Props MaskedInputField
+<Props of={MaskedInputField} />
+
+# MaskedInputField Currency
+<Preview>
+  <Story name="MaskedInputField Currency">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <MaskedInputField.Currency
+        showMask={true}
+        size="md" styled="margin-right: 20px;" placeholder="Currency Dollar" type="text"
+      />
+      <MaskedInputField.Currency
+        showMask={true}
+        maskOptions={{prefix: "Rp. ", thousandsSeparatorSymbol: ".", decimalSymbol: ","}}
+        size="md" styled="margin-right: 20px;" placeholder="Currency Rupiah" type="text"
+      />
+      <MaskedInputField.Currency
+        maskOptions={{prefix: "", thousandsSeparatorSymbol: ".", decimalSymbol: ",", integerLimit: ""}}
+        size="md" styled="margin-right: 20px;" placeholder="Currency Rupiah" type="text"
+      />
+    </div>
+  </Story>
+</Preview>
+
+## Props MaskedInputField.Currency
+Have all MaskedInputField props with additional:
+<Props of={MaskedInputField.Currency} />
+
+# MaskedInputField Date
+<Preview>
+  <Story name="MaskedInputField Date">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <MaskedInputField.Date
+        showMask={true}
+        format="yyyy-mm-dd"
+        mask={[/\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, "-", /\d/, /\d/]}
+        size="md" styled="margin-right: 20px;" placeholder="yyyy-mm-dd"
+      />
+      <MaskedInputField.Date
+        showMask={true}
+        size="md" styled="margin-right: 20px;" placeholder="mm/dd/yyyy"
+      />
+      <MaskedInputField.Date
+        format="yyyy-mm-dd HH:MM"
+        mask={[/\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, "-", /\d/, /\d/, " ", /\d/, /\d/, ":", /\d/, /\d/]}
+        size="md" styled="margin-right: 20px;" placeholder="yyyy-mm-dd HH:MM"
+      />
+    </div>
+  </Story>
+</Preview>
+
+### MaskedInputField Datetime with min and max year
+<Preview>
+  <Story name="MaskedInputField Datetime">
+      <div>
+        <div>{"Min: 2000, " + "Max: " + new Date().getFullYear() }</div>
+        <MaskedInputField.Date
+          format="yyyy-mm-dd HH:MM" minYear={2000} maxYear={new Date().getFullYear()}
+          mask={[/\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, "-", /\d/, /\d/, " ", /\d/, /\d/, ":", /\d/, /\d/]}
+          size="md" styled="margin-right: 20px;" placeholder="yyyy-mm-dd HH:MM" variant="outlined"
+        />
+      </div>
+  </Story>
+</Preview>
+
+## Props MaskedInputField.Date
+Have all MaskedInputField props with additional:
+<Props of={MaskedInputField.Date} />

@@ -1,0 +1,30 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {Textarea} from '../../components';
+
+<Meta title='Components|Textarea'/>
+
+# Textarea
+<Preview>
+  <Story name="Textarea">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <Textarea size="sm" styled="margin-right: 20px;" placeholder="Small" />
+      <Textarea size="md" variant="outlined" rows="5" color="secondary" styled="margin-right: 20px" placeholder="Medium"/>
+      <Textarea size="lg" color="default" placeholder="Large"/>
+    </div>
+  </Story>
+</Preview>
+
+### Error
+<Preview>
+  <Story name="Textarea Error">
+    <div style={{display: "flex", alignItems: "flex-end"}}>
+      <Textarea size="sm" variant="outlined" styled="margin-right: 20px" placeholder="Small" error />
+      <Textarea size="md" color="secondary" styled="margin-right: 20px" placeholder="Medium" error />
+      <Textarea size="lg" variant="outlined" styled="margin-right: 20px" color="default" placeholder="Large" error />
+      <Textarea size="lg" variant="outlined" color="default" placeholder="Disable" disabled />
+    </div>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Textarea} />
