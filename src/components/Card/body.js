@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import themes from '../themes';
-import {cssjoin, cssautosize} from '../../helpers';
 
 const StyledCardBody = styled.div`
   ${props => props.shortcutStyled};

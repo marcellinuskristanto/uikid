@@ -1,6 +1,2 @@
-npm run storybook
-
-# Deploy to github:
-```
-npm run deploy-storybook
-```
+# Demo
+[Storybook](https://marcellinuskristanto.github.io/uikid/?path=/docs/)

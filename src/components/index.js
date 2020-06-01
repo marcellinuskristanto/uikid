@@ -14,6 +14,7 @@ import Loading from './Loading';
 import Scrollable from './Scrollable';
 import {ImageScale} from './Image';
 import Carousel from './Carousel';
+import themes from './themes';
 
 export {
   Button,
@@ -32,4 +33,5 @@ export {
   Scrollable,
   ImageScale,
   Carousel,
+  themes,
 }
