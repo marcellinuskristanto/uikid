@@ -20,7 +20,7 @@ const StyledText = styled.p`
   ${props => props.shortcutStyle};
   ${props => props.styled};
 `
-StyledText.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
+StyledText.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 const Text = ({h1,h2,h3,h4,h5,h6,p,...props}) => {
   let tag;
   if(h1){tag="h1"}

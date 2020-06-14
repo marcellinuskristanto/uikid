@@ -28,7 +28,7 @@ const StyledDot = styled.span`
   border-radius: 50%;
   height: ${props=>props.size}px;
   min-width: ${props=>props.size}px;
-  background-color: ${props=>cssautocolor(props.color, props.themex)};
+  background-color: ${props=>cssautocolor(props.color, props.theme)};
   display: inline-block;
   ${props => props.shortcutStyle};
   ${props => props.styled};
@@ -43,10 +43,10 @@ const FirstDot = styled(StyledDot)`
   animation: ${blink} 1s ease-in-out 0ms infinite normal none running;
 `
 
-StyledContainer.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
-FirstDot.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
-SecondDot.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
-ThirdDot.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
+StyledContainer.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+FirstDot.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+SecondDot.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+ThirdDot.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const LoadingDots = ({
   firstDotProps, secondDotProps, thirdDotProps, size, color, ...props

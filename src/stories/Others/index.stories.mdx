@@ -1,0 +1,99 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import {Radio} from '../../components';
+
+<Meta title='Others|Others'/>
+
+# Theme object
+```
+{
+  colors: {
+    primary: {
+      main: "#2196F3",
+      light: "#90CAF9",
+      dark: "#0D47A1",
+      text: "white"
+    },
+    secondary: {
+      main: "#9C27B0",
+      light: "#CE93D8",
+      dark: "#4A148C",
+      text: "white"
+    },
+    plain: {
+      main: "#F0F0F0",
+      light: "#F6F6F6",
+      dark: "#BABABA",
+      text: "black",
+    },
+    error: {
+      main: "#FF0000",
+      text: "#FF0000"
+    },
+    default: {
+      main: "#BABABA",
+      light: "#EEE",
+      dark: "#949494",
+      text: "black"
+    },
+    shadow: {
+      dot: "black",
+    },
+    background: "white",
+  },
+  breakpoint: {
+    sm: "600px",
+    md: "960px",
+    lg: "1280px"
+  },
+  pxxs: "4px",
+  pxs: "8px",
+  psm: "12px",
+  pmd: "16px",
+  plg: "24px",
+  pxl: "40px",
+  pxxl: "60px",
+  mxxs: "4px",
+  mxs: "8px",
+  msm: "12px",
+  mmd: "16px",
+  mlg: "24px",
+  mxl: "40px",
+  mxxl: "60px",
+  fxxs: "10px",
+  fxs: "12px",
+  fsm: "14px",
+  fmd: "16px",
+  flg: "24px",
+  fxl: "32px",
+  fxxl: "40px"
+}
+```
+
+# Shortcut style
+```
+{
+  shortcutStyle: css`
+    padding: ${props=>props.p};
+    padding-top: ${props=>props.pt};
+    padding-right: ${props=>props.pr};
+    padding-bottom: ${props=>props.pb};
+    padding-left: ${props=>props.pl};
+    margin: ${props=>props.m};
+    margin-top: ${props=>props.mt};
+    margin-right: ${props=>props.mr};
+    margin-bottom: ${props=>props.mb};
+    margin-left: ${props=>props.ml};
+    font-size: ${props=>props.f};
+    font-weight: ${props => props.fontWeight};
+    text-align: ${props => props.textAlign};
+    width: ${props => props.w};
+    height: ${props => props.h};
+    display: ${props => props.display};
+    flex-direction: ${props=>props.direction};
+    align-items: ${props => props.alignItems};
+    justify-content: ${props => props.justifyContent};
+    background: ${props => props.bg};
+    color: ${props => props.c};
+  `
+}
+```

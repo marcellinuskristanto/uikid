@@ -31,7 +31,7 @@ const StyledLoadingSpinner = styled.div.attrs(props=> {
 const StyledSpinner = styled.svg`
   animation: ${spin} 0.5s linear infinite;
   & > circle {
-    stroke: ${props=> cssautocolor(props.color, props.themex)};
+    stroke: ${props=> cssautocolor(props.color, props.theme)};
     stroke-width: 5;
     fill: none;
     stroke-dasharray: ${props=>props.fullCircle};
@@ -41,8 +41,8 @@ const StyledSpinner = styled.svg`
   ${props => props.styled};
 `
 
-StyledLoadingSpinner.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
-StyledSpinner.defaultProps = {themex: themes.primary,shortcutStyle: themes.styled}
+StyledLoadingSpinner.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+StyledSpinner.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const LoadingSpinner = ({color, svgProps, ...props}) => {
   const r = 20,

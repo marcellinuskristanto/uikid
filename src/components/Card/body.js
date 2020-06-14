@@ -9,7 +9,7 @@ const StyledCardBody = styled.div`
 `;
 
 StyledCardBody.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyled: themes.styled
 }
 

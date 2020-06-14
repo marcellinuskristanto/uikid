@@ -23,7 +23,7 @@ const StyledScrollableVertical = css`
 `
 
 StyledScrollable.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 

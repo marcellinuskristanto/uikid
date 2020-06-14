@@ -21,7 +21,7 @@ const StyledDot = styled.li`
   border-radius: 50%;
   cursor: pointer;
   opacity: ${props => props.active ? 1 : 0.3};
-  box-shadow: 1px 1px 2px ${props => props.themex.colors.shadow.dot};
+  box-shadow: 1px 1px 2px ${props => props.theme.colors.shadow.dot};
   transition: opacity .25s ease-in;
   :hover{
     opacity: 1;
@@ -29,11 +29,11 @@ const StyledDot = styled.li`
 `
 
 StyledContainer.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 StyledDot.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 

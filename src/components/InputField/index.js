@@ -6,9 +6,9 @@ import {cssjoin, cssautosize} from '../../helpers';
 
 const StyledInput = styled.input.attrs(props => ({
   fontSize: cssautosize(props.size, {
-    sm: props.themex.fxs,
-    md: props.themex.fmd,
-    lg: props.themex.flg,
+    sm: props.theme.fxs,
+    md: props.theme.fmd,
+    lg: props.theme.flg,
   }),
   paddingSize: cssautosize(props.size, {
     sm: cssjoin("4px", "12px"),
@@ -16,9 +16,9 @@ const StyledInput = styled.input.attrs(props => ({
     lg: cssjoin("8px", "16px"),
   }),
   variantStyle: props.variant=="outlined" ? StyledOutlined : StyledDefault,
-  textColor: props.themex.colors.default.text,
-  borderColor: props.error ? props.themex.colors.error.main : props.themex.colors.default.main,
-  borderHoverColor: props.error ? props.themex.colors.error.main : props.themex.colors[props.color].main
+  textColor: props.theme.colors.default.text,
+  borderColor: props.error ? props.theme.colors.error.main : props.theme.colors.default.main,
+  borderHoverColor: props.error ? props.theme.colors.error.main : props.theme.colors[props.color].main
 }))`
   font-size: ${props => props.fontSize};
   padding: ${props => props.paddingSize};
@@ -27,6 +27,7 @@ const StyledInput = styled.input.attrs(props => ({
   outline: none;
   width: ${props => props.fullWidth && "100%"};
   ${props => props.variantStyle};
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `;
 const StyledOutlined = css`
@@ -50,9 +51,7 @@ const StyledDefault = css`
   }
 `
 
-StyledInput.defaultProps = {
-  themex: themes.primary
-}
+StyledInput.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const InputField = ({forwardedRef,...props}) => {
   return(
@@ -76,7 +75,7 @@ InputField.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'default']),
   error: PropTypes.bool,
   placeholder: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'md', "lg"]),
+  size: PropTypes.string,
   /**
   Override style
   **/

@@ -82,25 +82,57 @@ export default {
     ...padding
   },
   dark: {
-    color:{
-
+    colors: {
+      primary: {
+        main: "#3700B3",
+        light: "#90CAF9",
+        dark: "#26007D",
+        text: "white"
+      },
+      secondary: {
+        main: "#03DAC6",
+        light: "#CE93D8",
+        dark: "#02988A",
+        text: "black"
+      },
+      plain: {
+        main: "#4C4C4C",
+        light: "#F6F6F6",
+        dark: "#333",
+        text: "white",
+      },
+      error: {
+        main: "#CF6679",
+        text: "white"
+      },
+      default: {
+        main: "#433E47",
+        light: "#8E8B90",
+        dark: "#949494",
+        text: "white"
+      },
+      shadow: {
+        dot: "black",
+      },
+      background: "#121212",
     },
+    breakpoint,
     ...font,
     ...margin,
     ...padding
   },
   styled: css`
-    padding: ${props=>cssautothemesize(props.p, props.themex)};
-    padding-top: ${props=>cssautothemesize(props.pt, props.themex)};
-    padding-right: ${props=>cssautothemesize(props.pr, props.themex)};
-    padding-bottom: ${props=>cssautothemesize(props.pb, props.themex)};
-    padding-left: ${props=>cssautothemesize(props.pl, props.themex)};
-    margin: ${props=>cssautothemesize(props.m, props.themex, "m")};
-    margin-top: ${props=>cssautothemesize(props.mt, props.themex, "m")};
-    margin-right: ${props=>cssautothemesize(props.mr, props.themex, "m")};
-    margin-bottom: ${props=>cssautothemesize(props.mb, props.themex, "m")};
-    margin-left: ${props=>cssautothemesize(props.ml, props.themex, "m")};
-    font-size: ${props=>cssautothemesize(props.f, props.themex, "f")};
+    padding: ${props=>cssautothemesize(props.p, props.theme)};
+    padding-top: ${props=>cssautothemesize(props.pt, props.theme)};
+    padding-right: ${props=>cssautothemesize(props.pr, props.theme)};
+    padding-bottom: ${props=>cssautothemesize(props.pb, props.theme)};
+    padding-left: ${props=>cssautothemesize(props.pl, props.theme)};
+    margin: ${props=>cssautothemesize(props.m, props.theme, "m")};
+    margin-top: ${props=>cssautothemesize(props.mt, props.theme, "m")};
+    margin-right: ${props=>cssautothemesize(props.mr, props.theme, "m")};
+    margin-bottom: ${props=>cssautothemesize(props.mb, props.theme, "m")};
+    margin-left: ${props=>cssautothemesize(props.ml, props.theme, "m")};
+    font-size: ${props=>cssautothemesize(props.f, props.theme, "f")};
     font-weight: ${props => props.fontWeight};
     text-align: ${props => props.textAlign};
     width: ${props => props.w};
@@ -109,5 +141,7 @@ export default {
     flex-direction: ${props=>props.direction};
     align-items: ${props => props.alignItems};
     justify-content: ${props => props.justifyContent};
+    background: ${props => props.bg};
+    color: ${props => props.c};
   `
 }

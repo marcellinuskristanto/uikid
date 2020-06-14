@@ -2,34 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import themes from '../themes';
-import {cssjoin, cssautosize} from '../../helpers';
+import {cssjoin, cssautosize, cssautocolor} from '../../helpers';
 import Loading from '../Loading';
 
 const StyledButton = styled.button`
   font-size: ${props =>
     cssautosize(props.size, {
-      sm: props.themex.fxs,
-      md: props.themex.fmd,
-      lg: props.themex.flg,
+      sm: props.theme.fxs,
+      md: props.theme.fmd,
+      lg: props.theme.flg,
     })
   };
   padding: ${props =>
     cssautosize(props.size, {
-      sm: cssjoin(props.themex.pxxs, props.themex.psm),
-      md: cssjoin(props.themex.pxs, props.themex.psm),
-      lg: cssjoin(props.themex.pxs, props.themex.pmd),
+      sm: cssjoin(props.theme.pxxs, props.theme.psm),
+      md: cssjoin(props.theme.pxs, props.theme.psm),
+      lg: cssjoin(props.theme.pxs, props.theme.pmd),
     })
   };
   border-radius: 3px;
-  color: ${props => props.themex.colors[props.color].text};
-  background-color: ${props => props.themex.colors[props.color].main};
+  color: ${props => cssautocolor(props.color, props.theme, "text")};
+  background-color: ${props => cssautocolor(props.color, props.theme)};
   border: none;
   outline: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in;
   pointer-events: ${props => props.isLoading && "none"};
   &:hover {
-    background-color: ${props => props.themex.colors[props.color].dark};
+    background-color: ${props => cssautocolor(props.color, props.theme, "dark")};
   }
   ${props => {
     if(props.disabled){
@@ -50,7 +50,7 @@ const StyledRightIcon = styled.span`
 `
 
 StyledButton.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 
@@ -114,8 +114,8 @@ Button.propTypes = {
   Override style
   **/
   className: PropTypes.string,
-  color: PropTypes.oneOf(['primary', 'secondary', 'plain']),
-  size: PropTypes.oneOf(['sm', 'md', "lg"]),
+  color: PropTypes.string,
+  size: PropTypes.string,
   /**
   Override style
   **/

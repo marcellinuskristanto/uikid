@@ -15,9 +15,9 @@ const StyledContainer = styled.label`
       `
     }
   }}
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `
-
 const StyledRadio = styled.input.attrs(props => ({
   type: "radio"
 }))`
@@ -26,17 +26,18 @@ const StyledRadio = styled.input.attrs(props => ({
   cursor: pointer;
   height: 0;
   width: 0;
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `
 const StyledCheckmark = styled.span.attrs(props => {
-  let borderColor = props.themex.colors.default.main,
-      bgColor = props.themex.colors.default.light;
+  let borderColor = props.theme.colors.default.main,
+      bgColor = props.theme.colors.default.main;
   if(props.error){
-    borderColor = props.themex.colors.error.main;
-    bgColor = props.themex.colors.error.main;
+    borderColor = props.theme.colors.error.main;
+    bgColor = props.theme.colors.error.main;
   }
   else if (props.color==="primary" || props.color==="secondary"){
-    bgColor = props.themex.colors[props.color].main;
+    bgColor = props.theme.colors[props.color].main;
   }
   else{
     bgColor = props.color;
@@ -50,8 +51,8 @@ const StyledCheckmark = styled.span.attrs(props => {
   border-radius: 50%;
   height: 17px;
   width: 17px;
-  background-color: ${props => props.themex.colors.default.light};
-  box-shadow: 0 0px 1px 1px ${props => props.themex.colors.default.main};
+  background-color: ${props => props.theme.colors.default.main};
+  box-shadow: 0 0px 1px 1px ${props => props.theme.colors.default.main};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,19 +71,22 @@ const StyledCheckmark = styled.span.attrs(props => {
   ${StyledRadio}:checked ~ &:after {
     transform: scale(1);
   }
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `
-
 const StyledLabel = styled.span.attrs(props=>({
-  textColor: props.error ? props.themex.colors.error.text : props.themex.colors.default.text
+  textColor: props.error ? props.theme.colors.error.text : props.theme.colors.default.text
 }))`
   padding-left: 10px;
   color: ${props => props.textColor};
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `
 
-StyledCheckmark.defaultProps = {themex: themes.primary}
-StyledLabel.defaultProps = {themex: themes.primary}
+StyledContainer.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+StyledRadio.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+StyledCheckmark.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
+StyledLabel.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const Radio = ({
   styled, checked, name, color, disabled, error, onChange,

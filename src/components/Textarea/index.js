@@ -6,9 +6,9 @@ import {cssjoin, cssautosize} from '../../helpers';
 
 const StyledTextarea = styled.textarea.attrs(props => ({
   fontSize: cssautosize(props.size, {
-    sm: props.themex.fxs,
-    md: props.themex.fmd,
-    lg: props.themex.flg,
+    sm: props.theme.fxs,
+    md: props.theme.fmd,
+    lg: props.theme.flg,
   }),
   paddingSize: cssautosize(props.size, {
     sm: cssjoin("4px", "12px"),
@@ -16,9 +16,9 @@ const StyledTextarea = styled.textarea.attrs(props => ({
     lg: cssjoin("8px", "16px"),
   }),
   variantStyle: props.variant=="outlined" ? StyledOutlined : StyledDefault,
-  textColor: props.themex.colors.default.text,
-  borderColor: props.error ? props.themex.colors.error.main : props.themex.colors.default.main,
-  borderHoverColor: props.error ? props.themex.colors.error.main : props.themex.colors[props.color].main
+  textColor: props.theme.colors.default.text,
+  borderColor: props.error ? props.theme.colors.error.main : props.theme.colors.default.main,
+  borderHoverColor: props.error ? props.theme.colors.error.main : cssautocolor(props.color, props.theme)
 }))`
   font-size: ${props => props.fontSize};
   padding: ${props => props.paddingSize};
@@ -32,6 +32,7 @@ const StyledTextarea = styled.textarea.attrs(props => ({
       pointer-events: none;
     `
   };
+  ${props => props.shortcutStyle };
   ${props => props.styled};
 `;
 const StyledOutlined = css`
@@ -55,9 +56,7 @@ const StyledDefault = css`
   }
 `
 
-StyledTextarea.defaultProps = {
-  themex: themes.primary
-}
+StyledTextarea.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const Textarea = ({forwardedRef,...props}) => {
   return(
@@ -83,7 +82,7 @@ Textarea.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'default']),
   error: PropTypes.bool,
   placeholder: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'md', "lg"]),
+  size: PropTypes.string,
   /**
   Override style
   **/

@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   ${props => props.styled};
 `
 StyledContainer.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 };
 

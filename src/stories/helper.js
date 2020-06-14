@@ -1,8 +1,8 @@
 import React from 'react';
 import {Preview as BlockPreview} from '@storybook/addon-docs/blocks';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { css,createGlobalStyle } from 'styled-components';
 
-const StyledPreview = styled(BlockPreview)`
+const customStyle = css`
   overflow: visible;
   &, & .css-1ilulqq{
     z-index: 2;
@@ -12,11 +12,16 @@ const StyledPreview = styled(BlockPreview)`
   }
 `
 
+const StyledPreview = styled(BlockPreview)`
+  ${props => customStyle}
+`
+
 export const Preview = (props) => {
   return(
     <StyledPreview {...props}/>
   )
 }
+
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;

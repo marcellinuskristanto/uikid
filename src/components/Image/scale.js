@@ -46,19 +46,19 @@ const StyledContainer = styled.div`
 `
 
 StyledContainer.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 StyledInnerContainer.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 StyledImage.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 StyledOverlay.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 

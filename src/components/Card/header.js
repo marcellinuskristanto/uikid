@@ -4,13 +4,13 @@ import styled, {css} from 'styled-components';
 import themes from '../themes';
 
 const StyledCardHeader = styled.div`
-  border-bottom: 1px solid ${props=>props.themex.colors.default.main};
+  border-bottom: 1px solid ${props=>props.theme.colors.default.main};
   ${props => props.shortcutStyled};
   ${props => props.styled};
 `;
 
 StyledCardHeader.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyled: themes.styled
 }
 

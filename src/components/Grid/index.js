@@ -32,10 +32,10 @@ const StyledGridItem = css`
       width: ${props.xs / 12 * 100}%;
     `
   }}
-  ${props => Object.keys(props.themex.breakpoint).map((key) => {
+  ${props => Object.keys(props.theme.breakpoint).map((key) => {
     if(props[key]){
       return `
-        @media (min-width: ${props.themex.breakpoint[key]}){
+        @media (min-width: ${props.theme.breakpoint[key]}){
           flex-basis: ${props[key] / 12 * 100}%;
           width: ${props[key] / 12 * 100}%;
         }
@@ -45,7 +45,7 @@ const StyledGridItem = css`
 `
 
 StyledGrid.defaultProps = {
-  themex: themes.primary,
+  theme: themes.primary,
   shortcutStyle: themes.styled
 }
 

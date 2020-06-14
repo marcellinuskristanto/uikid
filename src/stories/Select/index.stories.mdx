@@ -90,8 +90,9 @@ import {data} from './example';
         <Grid item xs={3}>
           <Container p="10px">
             <Select
-              size="md" styled="margin-right: 20px;" placeholder="Secondary" color="secondary"
+              size="md" placeholder="Secondary" color="secondary"
               options={data} isMulti variant="outlined"
+              controlProps={{mr: "20px"}}
             />
           </Container>
         </Grid>
