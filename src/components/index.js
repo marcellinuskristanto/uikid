@@ -12,6 +12,7 @@ import Radio from './Radio';
 import Select from './Select';
 import Loading from './Loading';
 import Scrollable from './Scrollable';
+import Divider from './Divider';
 import {ImageScale} from './Image';
 import Carousel from './Carousel';
 import themes from './themes';
@@ -31,6 +32,7 @@ export {
   Select,
   Loading,
   Scrollable,
+  Divider,
   ImageScale,
   Carousel,
   themes,
