@@ -5,9 +5,6 @@ import themes from '../themes';
 import {cssautothemesize} from '../../helpers';
 
 const StyledContainer = styled.div`
-  margin: ${props => props.marginAuto && "auto"};
-  max-width: ${props => props.maxWidth};
-  min-width: ${props => props.minWidth};
   ${props => props.shortcutStyle};
   ${props => props.styled};
 `

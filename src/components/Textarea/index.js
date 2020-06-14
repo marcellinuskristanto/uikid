@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import themes from '../themes';
-import {cssjoin, cssautosize} from '../../helpers';
+import {cssjoin, cssautosize, cssautocolor} from '../../helpers';
 
 const StyledTextarea = styled.textarea.attrs(props => ({
   fontSize: cssautosize(props.size, {

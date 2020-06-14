@@ -65,28 +65,26 @@ import {Radio} from '../../components';
   fmd: "16px",
   flg: "24px",
   fxl: "32px",
-  fxxl: "40px"
-}
-```
-
-# Shortcut style
-```
-{
-  shortcutStyle: css`
-    padding: ${props=>props.p};
-    padding-top: ${props=>props.pt};
-    padding-right: ${props=>props.pr};
-    padding-bottom: ${props=>props.pb};
-    padding-left: ${props=>props.pl};
-    margin: ${props=>props.m};
-    margin-top: ${props=>props.mt};
-    margin-right: ${props=>props.mr};
-    margin-bottom: ${props=>props.mb};
-    margin-left: ${props=>props.ml};
-    font-size: ${props=>props.f};
+  fxxl: "40px",
+  styled: css`
+    padding: ${props=>cssautothemesize(props.p, props.theme)};
+    padding-top: ${props=>cssautothemesize(props.pt, props.theme)};
+    padding-right: ${props=>cssautothemesize(props.pr, props.theme)};
+    padding-bottom: ${props=>cssautothemesize(props.pb, props.theme)};
+    padding-left: ${props=>cssautothemesize(props.pl, props.theme)};
+    margin: ${props=>cssautothemesize(props.m, props.theme, "m")};
+    margin-top: ${props=>cssautothemesize(props.mt, props.theme, "m")};
+    margin-right: ${props=>cssautothemesize(props.mr, props.theme, "m")};
+    margin-bottom: ${props=>cssautothemesize(props.mb, props.theme, "m")};
+    margin-left: ${props=>cssautothemesize(props.ml, props.theme, "m")};
+    font-size: ${props=>cssautothemesize(props.f, props.theme, "f")};
     font-weight: ${props => props.fontWeight};
     text-align: ${props => props.textAlign};
+    max-width: ${props => props.mxw};
+    min-width: ${props => props.mnw};
     width: ${props => props.w};
+    max-height: ${props => props.mxh};
+    min-height: ${props => props.mnh};
     height: ${props => props.h};
     display: ${props => props.display};
     flex-direction: ${props=>props.direction};
@@ -97,3 +95,6 @@ import {Radio} from '../../components';
   `
 }
 ```
+
+# Shortcut style
+Use theme.styled, override with **shortcutStyle** props

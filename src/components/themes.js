@@ -135,7 +135,11 @@ export default {
     font-size: ${props=>cssautothemesize(props.f, props.theme, "f")};
     font-weight: ${props => props.fontWeight};
     text-align: ${props => props.textAlign};
+    max-width: ${props => props.mxw};
+    min-width: ${props => props.mnw};
     width: ${props => props.w};
+    max-height: ${props => props.mxh};
+    min-height: ${props => props.mnh};
     height: ${props => props.h};
     display: ${props => props.display};
     flex-direction: ${props=>props.direction};
