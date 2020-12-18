@@ -49,10 +49,10 @@ SecondDot.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 ThirdDot.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const LoadingDots = ({
-  firstDotProps, secondDotProps, thirdDotProps, size, color, ...props
+  firstDotProps, secondDotProps, thirdDotProps, size, color, forwardedRef, ...props
 }) => {
   return(
-    <StyledContainer size={size} {...props}>
+    <StyledContainer size={size} ref={forwardedRef} {...props}>
       <FirstDot size={size} color={color} {...firstDotProps}/>
       <SecondDot size={size} color={color} {...secondDotProps}/>
       <ThirdDot size={size} color={color} {...thirdDotProps}/>

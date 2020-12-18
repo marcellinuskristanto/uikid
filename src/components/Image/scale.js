@@ -64,10 +64,10 @@ StyledOverlay.defaultProps = {
 
 const ImageScale = ({
   innerContainerProps,overlayProps,imageProps,
-  src, alt, ...props
+  src, alt, forwardedRef, ...props
 }) => {
   return(
-    <StyledContainer {...props}>
+    <StyledContainer ref={forwardedRef} {...props}>
       <StyledInnerContainer {...innerContainerProps}>
         <StyledOverlay {...overlayProps}>
           {props.children}

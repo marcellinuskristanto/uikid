@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import themes from '../themes';
+import {forwardRef} from '../Hoc';
 
 const StyledGrid = styled.div`
   ${props => props.shortcutStyle};
@@ -49,10 +50,11 @@ StyledGrid.defaultProps = {
   shortcutStyle: themes.styled
 }
 
-const Grid = ({wrap, children, ...props}) => {
+const Grid = ({wrap, children, forwardedRef, ...props}) => {
   return (
     <StyledGrid
       wrap={wrap ? "wrap" : "nowrap"}
+      ref={forwardedRef}
       {...props}
     >
       {children}
@@ -107,4 +109,4 @@ Grid.propTypes = {
   lg: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
-export default Grid;
+export default forwardRef(Grid);

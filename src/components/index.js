@@ -16,6 +16,7 @@ import Divider from './Divider';
 import {ImageScale} from './Image';
 import Carousel from './Carousel';
 import themes from './themes';
+import {forwardRef} from './Hoc';
 
 export {
   Button,
@@ -36,4 +37,5 @@ export {
   ImageScale,
   Carousel,
   themes,
+  forwardRef
 }

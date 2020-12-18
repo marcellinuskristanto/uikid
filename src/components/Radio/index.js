@@ -90,11 +90,11 @@ StyledLabel.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const Radio = ({
   styled, checked, name, color, disabled, error, onChange,
-  inputProps, radioProps, labelProps,
+  inputProps, radioProps, labelProps, forwardedRef,
   ...props
 }) => {
   return(
-    <StyledContainer styled={styled} disabled={disabled} {...props}>
+    <StyledContainer styled={styled} disabled={disabled} ref={forwardedRef} {...props}>
       <StyledRadio checked={checked} name={name} onChange={onChange} {...inputProps}/>
       <StyledCheckmark color={color} error={error} {...radioProps}/>
       <StyledLabel error={error} {...labelProps}>{props.children}</StyledLabel>

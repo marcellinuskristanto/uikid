@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import themes from '../themes';
+import {forwardRef} from '../Hoc';
 
 const StyledCardHeader = styled.div`
   border-bottom: 1px solid ${props=>props.theme.colors.default.main};
@@ -14,9 +15,9 @@ StyledCardHeader.defaultProps = {
   shortcutStyled: themes.styled
 }
 
-const CardHeader = ({...props}) => {
+const CardHeader = ({forwardedRef,...props}) => {
   return(
-    <StyledCardHeader className="card__header" {...props} />
+    <StyledCardHeader className="card__header" ref={forwardedRef} {...props} />
   )
 }
 
@@ -31,4 +32,4 @@ CardHeader.propTypes = {
   ]),
 }
 
-export default CardHeader;
+export default forwardRef(CardHeader);

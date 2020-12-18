@@ -102,11 +102,11 @@ StyledLabel.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
 const Checkbox = ({
   styled, checked, color, disabled, error, onChange,
-  inputProps, checkboxProps, labelProps,
+  inputProps, checkboxProps, labelProps, forwardedRef,
   ...props
 }) => {
   return(
-    <StyledContainer styled={styled} disabled={disabled} {...props}>
+    <StyledContainer styled={styled} disabled={disabled} ref={forwardedRef} {...props}>
       <StyledCheckbox checked={checked} onChange={onChange} {...inputProps}/>
       <StyledCheckmark color={color} error={error} {...checkboxProps}/>
       <StyledLabel error={error} {...labelProps}>{props.children}</StyledLabel>

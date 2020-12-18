@@ -44,11 +44,11 @@ const StyledSpinner = styled.svg`
 StyledLoadingSpinner.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 StyledSpinner.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
-const LoadingSpinner = ({color, svgProps, ...props}) => {
+const LoadingSpinner = ({color, svgProps, forwardedRef, ...props}) => {
   const r = 20,
         fullCircle = 2 * 3.14 * r;
   return(
-    <StyledLoadingSpinner {...props}>
+    <StyledLoadingSpinner ref={forwardedRef} {...props}>
       <StyledSpinner viewBox="22 22 44 44" fullCircle={fullCircle} color={color} {...svgProps}>
         <circle cx="44" cy="44" r={r}/>
       </StyledSpinner>

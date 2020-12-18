@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import themes from '../themes';
 import {cssjoin, cssautosize, cssautocolor} from '../../helpers';
 import Loading from '../Loading';
+import {forwardRef} from '../Hoc';
 
 const StyledButton = styled.button`
   font-size: ${props =>
@@ -55,7 +56,7 @@ StyledButton.defaultProps = {
 }
 
 const Button = ({
-  Loading, isLoading, loadingDelay, children, leftIcon, rightIcon, ...props
+  Loading, isLoading, loadingDelay, children, leftIcon, rightIcon, forwardedRef, ...props
 }) => {
   const [internalLoading, setInternalLoading] = React.useState(false);
   let timeout = React.useRef(null);
@@ -76,6 +77,7 @@ const Button = ({
   return(
     <StyledButton
       isLoading={internalLoading}
+      ref={forwardedRef}
       {...props}
     >
       {
@@ -128,7 +130,8 @@ Button.propTypes = {
   ]),
 }
 
-Button.StyledButton = StyledButton;
-Button.StyledLeftIcon = StyledLeftIcon;
-Button.StyledRightIcon = StyledRightIcon;
-export default Button;
+const ButtonWithRef = forwardRef(Button);
+ButtonWithRef.StyledButton = StyledButton;
+ButtonWithRef.StyledLeftIcon = StyledLeftIcon;
+ButtonWithRef.StyledRightIcon = StyledRightIcon;
+export default ButtonWithRef;

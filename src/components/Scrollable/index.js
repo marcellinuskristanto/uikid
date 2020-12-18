@@ -27,9 +27,9 @@ StyledScrollable.defaultProps = {
   shortcutStyle: themes.styled
 }
 
-const Scrollable = ({...props}) => {
+const Scrollable = ({forwardedRef,...props}) => {
   return(
-    <StyledScrollable {...props}>
+    <StyledScrollable ref={forwardedRef} {...props}>
       {props.children}
     </StyledScrollable>
   )

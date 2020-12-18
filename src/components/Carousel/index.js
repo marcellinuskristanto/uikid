@@ -61,7 +61,7 @@ const angkaSakti = 35;
 
 const Carousel = ({
   activeIndex, autoPlaySpeed, stopOnHover, speed, children, infinite, slideTolerance,
-  onChange, showArrow, showDots, debug, ...props
+  onChange, showArrow, showDots, forwardedRef, ...props
 }) => {
   const totalChildren = children.length,
         totalSlide = totalChildren + (infinite ? 2 : 0),
@@ -193,8 +193,6 @@ const Carousel = ({
     }
   }
   const runAutoPlay = () => {
-    if(debug){
-    }
     clearTimeout(refs.current.autoPlayTimeout);
     refs.current.autoPlayTimeout = setTimeout(() => {
       if(refs.current.stopAutoPlay && stopOnHover) return;
@@ -320,6 +318,7 @@ const Carousel = ({
   }
   return (
     <StyledCarousel
+      ref={forwardedRef}
       totalSlide={totalSlide}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}

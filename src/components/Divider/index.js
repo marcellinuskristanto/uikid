@@ -14,9 +14,10 @@ const StyledDivider = styled.div`
 
 StyledDivider.defaultProps = {theme: themes.primary,shortcutStyle: themes.styled}
 
-const Divider = ({...props}) => {
+const Divider = ({forwardedRef,...props}) => {
   return(
     <StyledDivider
+      ref={forwardedRef}
       {...props}
     />
   )

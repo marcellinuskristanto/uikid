@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import themes from '../themes';
-import {cssautothemesize} from '../../helpers';
+import {forwardRef} from '../Hoc';
 
 const StyledContainer = styled.div`
   ${props => props.shortcutStyle};
@@ -13,9 +13,9 @@ StyledContainer.defaultProps = {
   shortcutStyle: themes.styled
 };
 
-const Container = ({...props}) => {
+const Container = ({forwardedRef,...props}) => {
   return(
-    <StyledContainer {...props}>
+    <StyledContainer ref={forwardedRef} {...props}>
       {props.children}
     </StyledContainer>
   )
@@ -76,4 +76,4 @@ Container.propTypes = {
   styled: PropTypes.string,
 }
 
-export default Container;
+export default forwardRef(Container);

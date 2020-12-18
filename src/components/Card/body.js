@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import themes from '../themes';
+import {forwardRef} from '../Hoc';
 
 const StyledCardBody = styled.div`
   ${props => props.shortcutStyled};
@@ -13,9 +14,9 @@ StyledCardBody.defaultProps = {
   shortcutStyled: themes.styled
 }
 
-const CardBody = ({...props}) => {
+const CardBody = ({forwardedRef,...props}) => {
   return(
-    <StyledCardBody className="card__body" {...props} />
+    <StyledCardBody className="card__body" ref={forwardedRef} {...props} />
   )
 }
 
@@ -30,4 +31,4 @@ CardBody.propTypes = {
   ]),
 }
 
-export default CardBody;
+export default forwardRef(CardBody);

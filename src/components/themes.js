@@ -74,6 +74,9 @@ export default {
       shadow: {
         dot: "black",
       },
+      link: {
+        text: "#007fed"
+      },
       background: "white",
     },
     breakpoint,
@@ -113,6 +116,9 @@ export default {
       },
       shadow: {
         dot: "black",
+      },
+      link: {
+        text: "#007fed"
       },
       background: "#121212",
     },

@@ -4,6 +4,7 @@ import styled, {css} from 'styled-components';
 import themes from '../themes';
 import CardHeader from './header';
 import CardBody from './body';
+import {forwardRef} from '../Hoc';
 
 const StyledCard = styled.div`
   box-shadow: 0 0 4px 0 ${props => props.theme.colors.default.main}, 0 2px 2px 0 ${props => props.theme.colors.default.main};
@@ -16,9 +17,9 @@ StyledCard.defaultProps = {
   shortcutStyle: themes.styled
 }
 
-const Card = ({...props}) => {
+const Card = ({forwardedRef,...props}) => {
   return(
-    <StyledCard className="card" {...props}>
+    <StyledCard className="card" ref={forwardedRef} {...props}>
       {props.children}
     </StyledCard>
   )
@@ -35,6 +36,7 @@ Card.propTypes = {
   ]),
 }
 
-Card.Header = CardHeader;
-Card.Body = CardBody;
-export default Card;
+const CardWithRef = forwardRef(Card);
+CardWithRef.Header = CardHeader;
+CardWithRef.Body = CardBody;
+export default CardWithRef;
